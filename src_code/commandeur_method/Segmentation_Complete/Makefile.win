@@ -1,0 +1,35 @@
+# Project: segmentation_complete
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__ -Dwindows
+CC   = gcc.exe -D__DEBUG__ -Dwindows
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o segmentation_complete.o $(RES)
+LINKOBJ  = main.o segmentation_complete.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"../../../Library/lib" -lLaserScan -lPhotogrammetry  -lEispack -lLinpack -lnewmat -lANN -lg2c  -g3 
+# LIBS +=  -lLaserScan -lPhotogrammetry  -lEispack -lLinpack -lg2c  -L ../../../Library/lib
+# LIBS += -L../../../Foreign/newmat/lib -lnewmat -L../../../Foreign/ANN/lib -lANN
+INCS =  -I"C:/Dev-Cpp/include"  -I"../../../Library/Photogrammetry/include" -I"../../../Library/LaserScan/include" -I"../" -I"../../../Foreign/ANN/include/ANN"
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"../../../Library/Photogrammetry/include" -I"../../../Library/LaserScan/include" -I"../" -I"../"  -I"../../../Foreign/ANN/include/ANN"
+BIN  = ../../bin/segmentation_complete.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../../bin/segmentation_complete.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "..\..\bin\segmentation_complete.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+segmentation_complete.o: segmentation_complete.cc
+	$(CPP) -c segmentation_complete.cc -o segmentation_complete.o $(CXXFLAGS)

@@ -1,0 +1,4 @@
+COMMAND: r.to.vect --overwrite --quiet input="classified_raster_map_smv_bin_12888_thin" output="classified_raster_map_smv_bin_12888_thin" type="line" column="value"
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:50:52 2021
+---------------------------------------------------------------------------------

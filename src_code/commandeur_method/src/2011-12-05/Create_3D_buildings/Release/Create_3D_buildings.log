@@ -1,0 +1,15 @@
+﻿  Building.cpp
+  BuildingBlock.cpp
+  BuildingCell.cpp
+  Create_3D_buildings.cpp
+Create_3D_buildings.cpp(1): fatal error C1083: Cannot open include file: 'vld.h': No such file or directory
+  OCIWriter.cpp
+  Segments.cpp
+  SHPReader.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1925): warning C4005: 'snprintf': macro redefinition
+  c:\users\camille\documents\final4\src\2011-12-05\include\gdal\cpl_config.h(20): note: see previous definition of 'snprintf'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1927): fatal error C1189: #error:  Macro definition of snprintf conflicts with Standard Library function declaration
+  SHPWriter.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1925): warning C4005: 'snprintf': macro redefinition
+  c:\users\camille\documents\final4\src\2011-12-05\include\gdal\cpl_config.h(20): note: see previous definition of 'snprintf'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1927): fatal error C1189: #error:  Macro definition of snprintf conflicts with Standard Library function declaration

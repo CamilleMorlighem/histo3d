@@ -1,0 +1,11 @@
+COMMAND: r.to.vect --overwrite input="classified_without_symbols" output="classified_vector_map" type="area" column="value"
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:53:12 2021
+---------------------------------------------------------------------------------
+COMMAND: v.extract --overwrite input="classified_vector_map" layer="1" type="point,line,boundary,centroid,area,face" where="value=1" output="raw_building_plots" new=-1
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:53:13 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.dropcolumn.py map=raw_building_plots columns=label,value
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:53:15 2021

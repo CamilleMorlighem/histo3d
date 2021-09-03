@@ -1,0 +1,16 @@
+COMMAND: r.to.vect --overwrite --quiet -v -t input="segment_optimized_reg_rank1" output="segmstat_tmp_vect_12492" type="area" column="value"
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:49:50 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect --quiet map="segmstat_tmp_vect_12492" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="segmstat_tmp_vect_12492" key="cat" layer="1" separator="pipe"
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:49:52 2021
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.dropcolumn.py map=segment_vector_map columns=nber_pts
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:49:56 2021
+---------------------------------------------------------------------------------
+COMMAND: v.extract --overwrite input="segment_vector_map" layer="1" type="point,line,boundary,centroid,area,face" where="label not NULL" output="training_map" new=-1
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:49:56 2021

@@ -1,0 +1,59 @@
+
+#
+#    Copyright 2010 University of Twente and Delft University of Technology
+# 
+#       This file is part of the Mapping libraries and tools, developed
+#  for research, education and projects in photogrammetry and laser scanning.
+#
+#  The Mapping libraries and tools are free software: you can redistribute it
+#    and/or modify it under the terms of the GNU General Public License as
+#  published by the Free Software Foundation, either version 3 of the License,
+#                   or (at your option) any later version.
+#
+# The Mapping libraries and tools are distributed in the hope that it will be
+#    useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+#        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#                GNU General Public License for more details.
+#
+#      You should have received a copy of the GNU General Public License
+#          along with the Mapping libraries and tools.  If not, see
+#                      <http://www.gnu.org/licenses/>.
+#
+#----------------------------------------------------------------------------
+
+
+# Project: ascii2laser
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++ -D__DEBUG__
+CC   = gcc -D__DEBUG__
+WINDRES = windres
+RES  = 
+OBJ  = main.o ascii2laser_cpp.o $(RES)
+LINKOBJ  = main.o ascii2laser_cpp.o $(RES)
+LIBS =  -L"../../../Library/lib" -lLaserScan -lPhotogrammetry -lNR -lEispack -lLinpack -lg2c  -g3 
+LIBS +=  -lLaserScan -lPhotogrammetry -lNR -lEispack -lLinpack -lg2c  -L ../../../Library/lib
+LIBS += -L../../../Foreign/newmat/lib -lnewmat -L../../../Foreign/ANN/lib -lANN
+INCS =  -I/usr/include/c++/3.2.2  -I"../../../Library/Photogrammetry/include" -I"../../../Library/LaserScan/include" -I"../../../Foreign/NR/utils" 
+CXXINCS = -I/usr/include/c++/3.2.2 -I"../../../Library/Photogrammetry/include" -I"../../../Library/LaserScan/include" -I"../../../Foreign/NR/utils" 
+BIN  = ../../bin/ascii2laser
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../../bin/ascii2laser all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+ascii2laser_cpp.o: ascii2laser_cpp.cc
+	$(CPP) -c ascii2laser_cpp.cc -o ascii2laser_cpp.o $(CXXFLAGS)

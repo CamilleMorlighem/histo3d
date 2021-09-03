@@ -1,0 +1,17 @@
+Parsing C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\delft_1961\procedural_modelling\histo_model_delft_1961.json
+===== Validation (with official CityJSON schemas) =====
+-- Validating the syntax of the file
+	(using the schemas 1.0.1)
+-- Validating the internal consistency of the file (see docs for list)
+	--Vertex indices coherent
+	--Specific for CityGroups
+	--Semantic arrays coherent with geometry
+	--Root properties
+	--Empty geometries
+	--Duplicate vertices
+	--Orphan vertices
+	--CityGML attributes
+=====
+File is valid
+File has no warnings
+=====================================

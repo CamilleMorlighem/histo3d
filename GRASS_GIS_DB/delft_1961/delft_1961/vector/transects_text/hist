@@ -1,0 +1,8 @@
+COMMAND: v.in.ascii -n input="C:\Users\Camille\AppData\Local\Temp\tmpnv3u8dzh" output="temp_875950" format="standard" separator="pipe" skip=0 x=1 y=2 z=0 cat=0
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:50:54 2021
+---------------------------------------------------------------------------------
+COMMAND: v.category input="temp_875950" layer="1" type="line" output="classified_raster_map_smv_bin_12888_transects" option="add" cat=1 step=1
+GISDBASE: C:\Users\Camille\Documents\mem_docs\3_ANALYSIS\h3dcm\GRASS_GIS_DB
+LOCATION: delft_1961 MAPSET: delft_1961 USER: Camille DATE: Fri Sep 03 19:50:56 2021
+---------------------------------------------------------------------------------
