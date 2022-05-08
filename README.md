@@ -32,7 +32,7 @@ To run this code, you need a recent version of the following open source tools:
 * [cjio](https://github.com/cityjson/cjio)
 * [val3dity](https://val3dity.readthedocs.io/en/latest/)
 
-Note that this code was developped using Windows and was not tested with Mac. 
+Note that this code was developped using Windows and was not tested with macOS. 
 
 ## Example data 
 
