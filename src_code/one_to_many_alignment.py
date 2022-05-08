@@ -120,7 +120,6 @@ def overlapping_entity_pairs(entity_set1_overlaid, entity_set2_overlaid):
     all_vertices2_convexhull = all_vertices2.convex_hull
     overlapping_area = all_vertices1_convexhull.intersection(all_vertices2_convexhull)
     links_gdf = gpd.GeoDataFrame(geometry=[overlapping_area])
-    links_gdf.to_file("intersection.shp")
 
     # Those entities which do not intersect with the overlapping area will be removed.
     entity_set1_overlaid = entity_set1_overlaid.reset_index(drop = True)
