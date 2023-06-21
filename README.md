@@ -5,7 +5,7 @@
 
 This code allows to reconstruct automatically historical 3D city models from historical maps and it focusses on  arguably the  most  important  aspect  in  cities:  buildings. Given one historical map, it automatically reconstructs plausible building models, i.e.  as  we  are  limited  by the amount of historical information available, it is based on educated  guesses  and  assumptions  in  order  to  infer 3D models that most likely match reality at a given moment in time. 
 
-The  methodology  we  propose  to automatically reconstruct the 3D city models of a city at different times  consists  of  four  main  steps:  (1)  the  preparation  of the  historical  maps,  (2)  the  processing  of  the  historical maps  to  extract  the  building  plots,  (3)  the  subdivision  of these building plots into individual building footprints using two  different  alternatives  and  (4)  the  reconstruction  of  3D buildings from these building footprints. Two implementations of the methodology exist, a complete and a shortened one. Running one or the other depends on the input datasets provided (see [Input data](#input-data)). More details about the methodology workflow are available in the corresponding [MSc thesis](http://resolver.tudelft.nl/uuid:0889e498-cdd6-4a19-bbcb-d3fb189560e1). 
+The  methodology  we  propose  to automatically reconstruct the 3D city models of a city at different times  consists  of  four  main  steps:  (1)  the  preparation  of the  historical  maps,  (2)  the  processing  of  the  historical maps  to  extract  the  building  plots,  (3)  the  subdivision  of these building plots into individual building footprints using two  different  alternatives  and  (4)  the  reconstruction  of  3D buildings from these building footprints. Two implementations of the methodology exist, a complete and a shortened one. Running one or the other depends on the input datasets provided (see [Input data](#input-data)). More details about the methodology workflow are available in the corresponding [MSc thesis](http://resolver.tudelft.nl/uuid:0889e498-cdd6-4a19-bbcb-d3fb189560e1), or in [this paper](https://link.springer.com/article/10.1007/s44212-022-00011-3). 
 
 
 ## Input data
@@ -103,7 +103,9 @@ The present code makes use of the following open source codes:
 * The [convex decomposition implementation](https://github.com/wsilva32/poly_decomp.py) of Silva (2016);  
 * The turning function [MATLAB implementation](https://github.com/matan2050/TFMatcher) of Weissbuch (2017). 
 
-When using this code in a scientific context, please cite the following MSc thesis: http://resolver.tudelft.nl/uuid:0889e498-cdd6-4a19-bbcb-d3fb189560e1
+When using this code in a scientific context, please cite the following paper:
+
+Morlighem, C., Labetski, A. & Ledoux, H. Reconstructing historical 3D city models. Urban Info 1, 11 (2022). https://doi.org/10.1007/s44212-022-00011-3
 
 
 
